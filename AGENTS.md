@@ -12,8 +12,10 @@
 
 | SoT | 산출물 | 문서 |
 | --- | --- | --- |
-| `resume-sot.md` | `resume.html` | 이력서 |
-| `work-experience-sot.md` | `work-experience.html` | 경력기술서 |
+| `content/resume-sot.md` | `output/resume.html` | 이력서 |
+| `content/work-experience-sot.md` | `output/work-experience.html` | 경력기술서 |
+
+경로는 저장소 루트 기준이다. `content/`에는 SoT만, `output/`에는 열람·제출용 산출물만 둔다. 두 디렉터리는 모두 Git으로 추적하며, 관리 규칙은 `docs/`, 미반영 메모는 `pending/`에 둔다.
 
 ### 갱신 규칙
 

@@ -138,7 +138,7 @@
     .sheet .cert-row { align-items: baseline; flex-wrap: nowrap; gap: 16px; }
     h2 { break-after: avoid; }
     li, .cert-row, .other-item { break-inside: avoid; }
-    .page-break { break-before: page; page-break-before: always; margin-top: 0; }
+    section { margin-top: 64px; }
   }
   @media (max-width: 720px) {
     body { padding: 0; }
@@ -190,7 +190,7 @@
         </ul>
       </div>
 
-      <div class="project page-break">
+      <div class="project">
         <div class="proj-head"><h3>견적 버전 관리·일괄 수정</h3><span class="date">2025.06 – 2026.09</span></div>
         <ul class="dia">
           <li>고객이 확인한 시점을 재현하는 원본–버전 계보와 스냅샷을 설계하고, 복합 인덱스·트랜잭션 잠금으로 동시 버전 생성을 제어</li>

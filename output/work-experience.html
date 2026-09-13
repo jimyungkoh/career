@@ -93,15 +93,17 @@
   .tech-points { font-size: 13.5px; color: var(--muted); margin-top: 16px; }
   .tech-points strong { color: var(--muted); font-weight: 700; }
   hr.project-sep { border: none; border-top: 1px solid var(--rule); margin: 38px 0 0; }
-  @page { size: A4; margin: 14mm 16mm; }
+  @page { size: A4; margin: 11mm 15mm; }
   @media print {
-    body { background: #fff; padding: 0; }
+    body { background: #fff; padding: 0; line-height: 1.62; }
     body > .sheet { box-shadow: none; max-width: none; padding: 0; }
     .sheet .proj-head { align-items: baseline; flex-wrap: nowrap; gap: 16px; break-inside: avoid; break-after: avoid; }
     .sheet .proj-head h2 { flex: 0 1 auto; }
     .sheet .date { white-space: nowrap; }
     li { break-inside: avoid; }
-    section.block.page-break { break-before: page; page-break-before: always; margin-top: 0; }
+    section.block { margin-top: 26px; }
+    .proj-head { margin-bottom: 10px; }
+    ul.dia li { margin-bottom: 5px; }
   }
   @media (max-width: 720px) {
     body { padding: 0; }
@@ -143,7 +145,7 @@
         <li>병렬 수집으로 <strong>평가 응답 시간 40초 → 10초</strong>를 달성해 고객 정보 입력 완료 시점에 결과가 준비되도록 했고, 웹 검색 API·추론 강도 최적화로 <strong>건당 비용을 90% 이상 절감</strong>했습니다.</li>
       </ul>
     </section>
-    <section class="block page-break">
+    <section class="block">
       <div class="proj-head"><h2>3. 입금·정산 통합과 결제 안전성</h2><span class="date">2026.01 – 2026.09</span></div>
       <p>은행·외부 발행 플랫폼·엑셀에 분산된 입금·세무·정산을 관리자 한 흐름으로 통합하며 UI·UX, 데이터 구조, API와 화면 설계·구현을 전담했습니다. 후속으로 결제 재시도·지연 승인에 대응하는 복구 경로를 구현했습니다.</p>
       <ul class="dia">
@@ -162,7 +164,7 @@
         <li>견적 추적을 한 화면의 버전 탐색으로 전환하고, 부분 성공으로 금액·품목 순서가 불완전해지는 상태를 방지했습니다.</li>
       </ul>
     </section>
-    <section class="block page-break">
+    <section class="block">
       <div class="proj-head"><h2>5. 읽기 전용 MCP 운영 데이터 서버</h2><span class="date">2026.08 – 2026.09</span></div>
       <p>AI 클라이언트가 내부 DB 구조를 알지 못해도 허용된 도구로 여러 서비스의 업무 데이터를 조회하도록 TypeScript·NestJS 기반 서버를 구현하고, 인증·조회 범위를 검증했습니다.</p>
       <ul class="dia">

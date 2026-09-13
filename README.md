@@ -18,3 +18,4 @@
 - 에이전트 작업 규칙: [AGENTS.md](AGENTS.md)
 - HTML 문서 규격: [docs/html-spec.md](docs/html-spec.md)
 - 커밋 컨벤션: [docs/commit-convention.md](docs/commit-convention.md)
+- Pending 문서 규칙: [docs/pending-convention.md](docs/pending-convention.md)

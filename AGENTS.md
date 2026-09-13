@@ -29,5 +29,6 @@
 ```text
 docs/
 ├── html-spec.md — HTML 문서 규격; HTML 생성·재생성·수정 시 반드시 읽고 적용
-└── commit-convention.md — 커밋 컨벤션; commit 요청 시
+├── commit-convention.md — 커밋 컨벤션; commit 요청 시
+└── pending-convention.md — pending 문서 규칙; `pending/`에 문서 저장·수정 시
 ```

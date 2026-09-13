@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>고지명 · Product Engineer</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+<style>
+  :root {
+    --ink: #1c2330;
+    --body: #3d4552;
+    --muted: #7a8089;
+    --faint: #9aa0a8;
+    --rule: #e5e7ea;
+    --chip-bg: #f4f5f7;
+    --chip-border: #d7dae0;
+    --chip-text: #454b54;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    background: #eceef1;
+    color: var(--body);
+    font-size: 14.5px;
+    line-height: 1.72;
+    padding: 48px 16px;
+  }
+  .sheet {
+    max-width: 840px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 76px 84px;
+    box-shadow: 0 2px 24px rgba(15, 23, 42, 0.08);
+  }
+
+  /* ---------- header ---------- */
+  .masthead {
+    border-left: 5px solid var(--ink);
+    padding-left: 22px;
+    margin-bottom: 28px;
+  }
+  .masthead h1 {
+    font-size: 34px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+  .masthead .role {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .contact {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .contact .dia {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background: var(--faint);
+    transform: rotate(45deg);
+  }
+
+  .intro { margin-bottom: 14px; }
+  .intro strong { color: var(--ink); font-weight: 700; }
+
+  /* ---------- sections ---------- */
+  section { margin-top: 40px; }
+  h2 {
+    font-size: 19px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: 2px;
+    border-left: 5px solid var(--ink);
+    padding-left: 14px;
+    line-height: 1.35;
+    margin-bottom: 18px;
+  }
+
+  .company {
+    font-size: 17.5px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .role-line {
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .note {
+    font-size: 13.5px;
+    font-style: italic;
+    color: var(--faint);
+    margin-top: 8px;
+  }
+
+  .project { margin-top: 24px; }
+  .proj-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .proj-head h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+  .date {
+    font-size: 13px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ---------- diamond bullets ---------- */
+  ul.dia {
+    list-style: none;
+    margin-top: 8px;
+  }
+  ul.dia li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 7px;
+  }
+  ul.dia li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 0.78em;
+    width: 6px;
+    height: 6px;
+    background: var(--ink);
+    transform: rotate(45deg) translateY(-50%);
+  }
+  ul.dia strong { color: var(--ink); font-weight: 700; }
+
+  /* ---------- other experience ---------- */
+  .other-item { margin-top: 20px; }
+  .other-item .org {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+
+  /* ---------- skills ---------- */
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+  .chips span {
+    border: 1px solid var(--chip-border);
+    background: var(--chip-bg);
+    border-radius: 7px;
+    padding: 5px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--chip-text);
+  }
+
+  /* ---------- certifications ---------- */
+  .cert-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  .cert-row .what strong { color: var(--ink); font-weight: 700; }
+  .cert-row .what .sub { color: var(--muted); }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .sheet { box-shadow: none; max-width: none; padding: 0; }
+  }
+  @media (max-width: 720px) {
+    body { padding: 0; }
+    .sheet { padding: 40px 24px; }
+  }
+</style>
+</head>
+<body>
+  <div class="sheet">
+
+    <header class="masthead">
+      <h1>고지명</h1>
+      <p class="role">PRODUCT ENGINEER</p>
+      <p class="contact">
+        <span>aqaqeqeq0511@gmail.com</span><span class="dia"></span>
+        <span>jichive.com</span><span class="dia"></span>
+        <span>github.com/jimyungkoh</span>
+      </p>
+    </header>
+
+    <p class="intro">
+      영업·운영팀의 반복 업무를 제품으로 전환해 고객사 평가 응답 시간을 <strong>40초에서 10초로 단축</strong>하고, 평가 건당 비용을 <strong>90% 이상 절감</strong>한 프로덕트 엔지니어입니다.
+    </p>
+    <p class="intro">
+      요구사항을 UI·UX, 데이터 모델, 서버·관리자·고객 화면으로 구체화해 견적·임금·세무·정산에 분산된 업무를 하나의 운영 흐름으로 통합했습니다.
+    </p>
+
+    <section>
+      <h2>WORK EXPERIENCE</h2>
+
+      <p class="company">크렐로 (Creallo)</p>
+      <p class="role-line">Software Engineer&nbsp;&nbsp;|&nbsp;&nbsp;2025.02 – 재직 중</p>
+      <p class="note">여러 프로젝트를 업무 요구와 출시 일정에 따라 병행했으며, 주요 작업 종료 시점 기준 최신순입니다.</p>
+
+      <div class="project">
+        <div class="proj-head">
+          <h3>견적 검토·일괄 수정·자동 산정</h3>
+          <span class="date">2025.06 – 2026.07</span>
+        </div>
+        <ul class="dia">
+          <li>고객이 확인한 특정 시점의 견적을 재현할 수 있도록 원본–버전 계보와 스냅샷 모델을 설계하고, 복합 인덱스·트랜잭션 잠금으로 동시 버전 생성을 제어</li>
+          <li>엑셀 일괄 수정에 클라이언트 1차 검증, 서버 최종 검증, all-or-nothing 반영을 적용해 부분 실패로 인한 견적 금액·품목 순서 불일치를 방지</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="proj-head">
+          <h3>임금·세금계산서·협력사 정산</h3>
+          <span class="date">2026.01 – 2026.05</span>
+        </div>
+        <ul class="dia">
+          <li>주문·임금·세금계산서·협력사 정산이 서로 다른 시스템에 분산된 문제를 UI·UX, 관계 모델, API, 관리자 화면을 포함한 단일 운영 흐름으로 통합</li>
+          <li>확정 조건과 설명 가능한 가중치로 입금 연결 후보를 추천하되 담당자가 최종 확정하도록 설계하고, 입금 원장 잠금·누적 배분 검증·사후 연결/해제 경로로 금전 데이터의 정합성과 복구 가능성을 확보</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="proj-head">
+          <h3>RAG 기반 상담 자동화</h3>
+          <span class="date">2025.08 – 2026.05</span>
+        </div>
+        <ul class="dia">
+          <li>FAQ·AI·상담원 전환을 연결한 상담 시스템을 실제 운영하고, 운영 기간 중 <strong>AI 상담 문의의 62%를 상담원 전환 없이 종결</strong></li>
+          <li>일반 제조 지식을 근거로 자사 미지원 공정을 안내하던 문제를 발견하고, 상담 데이터를 공정·재료·마감으로 라벨링한 뒤 LLM 의도 분류 결과에 따라 해당 영역의 지식만 검색하는 도메인별 검색 라우팅 적용</li>
+          <li>답변과 참고 지식을 함께 검수하고 운영자가 지식·응답 규칙을 수정할 수 있는 품질 개선 화면 구현</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="proj-head">
+          <h3>LLM 기반 고객사 평가</h3>
+          <span class="date">2025.10 – 2026.04</span>
+        </div>
+        <ul class="dia">
+          <li>기업 메타·재무정보 기반 평가의 UI·UX와 서버 아키텍처를 구현해 <strong>평가 시간 40초 → 10초, 건당 비용 90% 이상 절감</strong></li>
+          <li>비결정적인 LLM 평가 결과를 업무에 활용할 수 있도록 재무 근거 검증, 결정론적 점수 보정, 신뢰도 표시와 관리자 검수 흐름을 적용하고, 데이터 부재와 AI 장애를 구분해 잘못된 평가 저장을 차단</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="proj-head">
+          <h3>웹 성능·콘텐츠 표준화·3D 도면 보안</h3>
+          <span class="date">2025.03 – 2026.04</span>
+        </div>
+        <ul class="dia">
+          <li>공통 문서 렌더러와 콘텐츠 모델로 관리자·공개 화면의 표시 기준을 통합해 도입 후 표시 불일치·SEO 누락 관련 신고 미발생</li>
+          <li>WebP 이전과 업로드 전 압축으로 운영 이미지 저장 용량 <strong>77.5% 절감</strong>, 동일 조건·캐시 없는 대표 측정에서 전체 페이지 로드 시간 <strong>3초 → 0.7초</strong> 개선</li>
+          <li>ISO/IEC 27001 인증 심사 대응을 위해 협력사·거래 상태 기반 3D 도면 보호 경로와 감사 로그를 구축해 인증 통과에 기여</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>OTHER EXPERIENCE</h2>
+
+      <div class="other-item">
+        <div class="proj-head">
+          <h3>항해 플러스 백엔드 6기</h3>
+          <span class="date">2024.09 – 2024.12</span>
+        </div>
+        <p class="org">스파르타 코딩클럽</p>
+        <ul class="dia">
+          <li>TDD, 대용량 트래픽, 장애 대응 중심 백엔드 과정 수료</li>
+          <li>과제 통과율 80%(평균 60%), 실력 인증서 상위권 획득</li>
+        </ul>
+      </div>
+
+      <div class="other-item">
+        <div class="proj-head">
+          <h3>Udemy 취업부트캠프 풀스택 과정</h3>
+          <span class="date">2023.12 – 2024.03</span>
+        </div>
+        <p class="org">웅진씽크빅</p>
+        <ul class="dia">
+          <li>풀스택 팀 프로젝트 최우수상</li>
+          <li>팀장으로 일정·진행 관리 및 GitHub–Slack 협업 체계 구축</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>SKILLS</h2>
+      <div class="chips">
+        <span>TypeScript</span>
+        <span>NestJS</span>
+        <span>Next.js</span>
+        <span>MySQL</span>
+        <span>Redis</span>
+        <span>Docker</span>
+        <span>AWS</span>
+        <span>GitHub Actions</span>
+        <span>OpenAI/Gemini API</span>
+        <span>Codex/Claude CLI</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>CERTIFICATIONS · EDUCATION</h2>
+      <div class="cert-row">
+        <p class="what"><strong>정보처리기사</strong> <span class="sub">· 한국산업인력공단</span></p>
+        <span class="date">2023.11</span>
+      </div>
+      <div class="cert-row">
+        <p class="what"><strong>IT경영학과 (학사)</strong> <span class="sub">· 한국공학대학교 · 4.14 / 4.50</span></p>
+        <span class="date">2017.03 – 2023.02</span>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>

@@ -23,7 +23,7 @@ pending/${yyyy-MM}/${dd}/${aspect}.md
 ```markdown
 - 최초 작성일: 2026-09-13
 - 상태: 검토 대기 — 이력서·경력기술서 SoT 미반영
-- 대상 문서: `content/resume-sot.md`, `content/work-experience-sot.md`
+- 대상 문서: `content/resume.md`, `content/work-experience.md`
 - 목적: 기존 경력의 강점과 신규 개발이력, 코드·커밋 검증 결과를 결합해 두 문서의 최종 구성·반영 문구·근거·보류 조건을 제안한다.
 
 ---
@@ -55,5 +55,5 @@ pending/${yyyy-MM}/${dd}/${aspect}.md
 
 - 경로 날짜는 최초 작성 시점으로 고정한다. 이후 수정은 파일을 새로 만들지 않고 같은 경로의 파일을 갱신한다.
 - 같은 날 같은 `aspect`는 하나의 파일로 유지한다.
-- `pending/`은 SoT가 아니다. 사용자가 명시적으로 반영을 지시하거나 파일을 지목한 경우에만 `content/resume-sot.md` 또는 `content/work-experience-sot.md`에 반영한다.
+- `pending/`은 SoT가 아니다. 사용자가 명시적으로 반영을 지시하거나 파일을 지목한 경우에만 메타데이터의 `대상 문서`에 적힌 SoT에 반영한다.
 - `pending/` 아래 파일은 커밋·stage하지 않는다.

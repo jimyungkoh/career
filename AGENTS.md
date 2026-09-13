@@ -8,18 +8,13 @@
 
 ### Source of Truth (SoT)
 
-아래 두 Markdown 파일이 이 디렉터리의 유일한 원천(SoT)이다. 내용 추가·수정·삭제는 항상 이 파일들에서만 수행한다.
+`content/`의 Markdown 파일이 이 디렉터리의 유일한 원천(SoT)이며, `content/<name>.md`는 `output/<name>.html`과 대응한다. 현재 문서 목록과 대응 관계는 [README.md](README.md)의 `문서` 표를 기준으로 한다.
 
-| SoT | 산출물 | 문서 |
-| --- | --- | --- |
-| `content/resume-sot.md` | `output/resume.html` | 이력서 |
-| `content/work-experience-sot.md` | `output/work-experience.html` | 경력기술서 |
-
-경로는 저장소 루트 기준이다. `content/`에는 SoT만, `output/`에는 열람·제출용 산출물만 둔다. 두 디렉터리는 모두 Git으로 추적하며, 관리 규칙은 `docs/`, 미반영 메모는 `pending/`에 둔다.
+경로는 저장소 루트 기준이다. 두 디렉터리는 모두 Git으로 추적하며, 관리 규칙은 `docs/`, 미반영 메모는 `pending/`에 둔다.
 
 ### 갱신 규칙
 
-1. **SoT만 편집한다.** `-sot.md` 파일을 수정하면, 같은 작업 안에서 대응되는 `.html` 산출물도 반드시 함께 갱신한다. md만 수정한 채 작업을 끝내지 않는다.
+1. **SoT만 편집한다.** `content/<name>.md`를 수정하면, 같은 작업 안에서 `output/<name>.html`도 반드시 함께 갱신한다. md만 수정한 채 작업을 끝내지 않는다.
 2. **HTML을 직접 편집하지 않는다.** `.html`은 SoT에서 파생된 산출물이다. 내용 변경이 필요하면 SoT md를 먼저 수정한 뒤 html을 재생성한다. 단, SoT 내용과 무관한 스타일·레이아웃 개선은 html에서 수행할 수 있다.
 3. **HTML 형식을 유지한다.** HTML 생성·재생성·수정 전에 반드시 [HTML 문서 규격](docs/html-spec.md)을 읽고 적용한다. 각 html은 독립형 단일 파일(인라인 `<style>`, 외부 의존은 Pretendard 폰트 CDN만)로 유지하고, 기존 디자인 토큰(CSS 변수, `.sheet` 레이아웃, `.masthead` 등 섹션 구조)을 보존한 채 SoT의 내용만 반영한다.
 4. **문서 간 정합성을 유지한다.** 두 SoT는 같은 경력을 다른 깊이로 서술하므로, 회사·직책·기간·성과 수치(예: 40초→10초, 건당 비용 90% 절감, AI 상담 무전환 종결 62%, 로드 3초→0.7초, 이미지 용량 77.5% 절감)가 양쪽에서 일치해야 한다. 한쪽만 수정하면 다른 쪽도 함께 점검한다.

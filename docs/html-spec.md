@@ -48,6 +48,7 @@
 - `ul.dia`: 기본 목록 표식 제거. `li`는 상대 위치, 왼쪽 패딩 `22px`, 아래 마진 `7px`.
 - `ul.dia li::before`: 빈 내용, 절대 위치, 왼쪽 `4px`, 크기 `6px × 6px`, 배경 `var(--ink)`, `transform: rotate(45deg) translateY(-50%)`. 세로 위치는 문서별 표를 따른다.
 - `ul.dia strong`: 색 `var(--ink)`, 굵기 `700`.
+- 링크 `a`: `color: inherit` 한 규칙만 지정한다. 링크 색은 각자가 놓인 문맥 색을 그대로 상속하고(예: 헤더 `.contact`의 `--muted`), 밑줄은 브라우저 기본값을 유지한다. 요소별로 링크 색을 따로 지정하지 않는다.
 
 ## 문서별 차이
 

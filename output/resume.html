@@ -137,7 +137,10 @@
   .cert-row .what .sub { color: var(--muted); }
   @page { size: A4; margin: 20mm 16mm; }
   @media print {
-    body { background: #fff; padding: 0; line-height: 1.78; }
+    ul.dia { list-style: disc; padding-left: 22px; }
+    ul.dia li { position: static; padding-left: 0; }
+    ul.dia li::before { content: none; }
+    body { background: #fff; padding: 0; line-height: 1.72; }
     body > .sheet { box-shadow: none; max-width: none; padding: 0; }
     .sheet .proj-head { align-items: baseline; flex-wrap: nowrap; gap: 16px; break-inside: avoid; break-after: avoid; }
     .sheet .proj-head h3 { flex: 0 1 auto; }
@@ -161,10 +164,10 @@
     <header class="masthead">
       <h1>고지명</h1>
       <p class="role">PRODUCT ENGINEER</p>
-      <p class="contact"><span>aqaqeqeq0511@gmail.com</span><span class="dia"></span><span><a href="https://jichive.com">jichive.com</a></span><span class="dia"></span><span><a href="https://github.com/jimyungkoh">github.com/jimyungkoh</a></span></p>
+      <p class="contact"><span><a href="mailto:aqaqeqeq0511@gmail.com">aqaqeqeq0511@gmail.com</a></span><span class="dia"></span><span><a href="https://jichive.com">jichive.com</a></span><span class="dia"></span><span><a href="https://github.com/jimyungkoh">github.com/jimyungkoh</a></span></p>
     </header>
 
-    <p class="intro">사람이 반복해서 확인하고 수습하던 업무를 제품으로 개선하는 프로덕트 엔지니어입니다. 현업의 업무 흐름을 이해하고 요구사항을 구체화해, 화면과 서버를 직접 설계하고 구현해 왔습니다. 자동화할 범위와 사람의 판단이 필요한 지점을 구분하고, 오류나 장애가 발생했을 때의 복구까지 함께 설계합니다.</p>
+    <p class="intro">사람이 반복해서 확인하고 수습하던 업무를 제품으로 개선하는 프로덕트 엔지니어입니다. 현업의 업무 흐름을 이해하고 요구사항을 구체화해 화면과 서버를 직접 설계·구현해 왔습니다. 자동화할 범위와 사람의 판단이 필요한 지점을 구분하고, 오류나 장애가 발생했을 때의 복구까지 함께 설계합니다.</p>
 
     <section>
       <h2>WORK EXPERIENCE</h2>
@@ -175,32 +178,33 @@
       <div class="project">
         <div class="proj-head"><h3>분석 서비스 AWS 재해복구·자동 전환</h3><span class="date">2026.07 – 2026.08</span></div>
         <ul class="dia">
-          <li>주말에는 현장 출근을 기다리느라 복구에 <strong>이틀 이상 걸리기도 했던</strong> 분석 업무에 AWS 자동 전환을 구축·적용하고, 클라우드가 기존 분석 대기열을 이어 처리하도록 전환</li>
-          <li><strong>DR 분석서버 평균 기동시간 약 5분</strong>, 평상시 예비 분석 자원 없이 <strong>상태 감시 고정비 월 약 2달러</strong>로 운영하고, 예약 기동·작업 보호·자동 복귀 구현(분석 실행비 별도)</li>
+          <li>주말에는 현장 복구에 이틀 이상 걸리기도 했던 분석 업무에 AWS Fargate 자동 전환을 구현해, 정전·네트워크 장애 시 기존 BullMQ 대기열을 이어 처리하도록 구성</li>
+          <li><strong>DR 분석서버 평균 기동시간 약 5분</strong>. 상시 클라우드 비용을 줄이기 위해 온프레미스를 주 실행 환경으로 유지하고, 평상시 <strong>Fargate 0개·상태 감시 고정비 월 약 2달러</strong>로 운영(장애·예약 시 분석 실행비 별도)</li>
         </ul>
       </div>
 
       <div class="project">
         <div class="proj-head"><h3>LLM 기반 고객사 평가</h3><span class="date">2025.10 – 2026.04</span></div>
         <ul class="dia">
-          <li>기업 메타·재무정보 수집을 병렬화하고 작업별 추론 강도를 조정해 <strong>평가 시간 40초 → 10초, 건당 비용 90% 이상 절감</strong></li>
-          <li>LLM의 수치 해석과 코드의 점수 계산을 분리하고, 데이터 부재·AI 장애 구분과 관리자 검수로 평가 신뢰성을 관리</li>
+          <li>기업 메타·재무정보를 병렬 수집해 <strong>평가 시간 40초 → 10초</strong>로 단축하고, 웹 검색 API·작업별 추론 강도 최적화로 <strong>건당 비용 90% 이상 절감</strong></li>
+          <li>재무 수치 해석은 LLM에, 평가 점수 계산은 코드에 맡겨 같은 정제 입력에 같은 점수를 산출. 데이터 부재와 AI 장애를 구분하고, 의심 데이터는 관리자가 원문을 확인해 평가 제외 여부를 결정</li>
         </ul>
       </div>
 
       <div class="project">
         <div class="proj-head"><h3>입금·정산 통합과 결제 안전성</h3><span class="date">2026.01 – 2026.09</span></div>
         <ul class="dia">
-          <li>입금·세금계산서·협력사 정산을 UI·UX, 관계 모델, API와 관리자 화면의 단일 흐름으로 통합하고, 후보 추천 뒤 담당자가 최종 확정하는 경계를 유지</li>
-          <li>원장 잠금·누적 배분 검증과 세금계산서 사후 연결·해제로 금전 데이터의 복구 경로를 마련하고, 이전 결제 요청이 최신 상태를 덮어쓰지 않게 하고 중복 승인 취소를 재시도하도록 구현</li>
+          <li>입금·세금계산서·협력사 정산의 데이터 모델·API·관리자 화면을 설계·구현해 분산된 업무를 통합. 입금과 주문의 연결은 후보를 추천하고 담당자가 확정하도록 구현</li>
+          <li>입금 배분에는 원장 잠금·누적 배분 검증을 적용해 입금액을 넘는 연결을 방지하고, 세금계산서는 사후 연결·잘못된 연결 해제로 복구 지원</li>
+          <li>결제 재시도에서는 현재 결제 시도를 확인해 이전 요청의 상태 덮어쓰기를 막고, 중복 승인은 취소 요청을 저장해 실패 시 재시도</li>
         </ul>
       </div>
 
       <div class="project">
         <div class="proj-head"><h3>견적 버전 관리·일괄 수정</h3><span class="date">2025.06 – 2026.09</span></div>
         <ul class="dia">
-          <li>고객이 확인한 시점을 재현하는 원본–버전 계보와 스냅샷을 설계하고, 복합 인덱스·트랜잭션 잠금으로 동시 버전 생성을 제어</li>
-          <li>견적 일괄 수정 시 브라우저·서버에서 이중 검증하고, 오류가 있으면 전체 반영을 취소해 일부 항목만 수정되는 상태를 방지</li>
+          <li>견적 버전 관리는 원본과 각 버전의 관계·전체 스냅샷을 저장해 고객이 확인한 견적을 재현. 버전 조회에 복합 인덱스를, 동시 버전 생성에 트랜잭션 잠금 기반 채번을 적용</li>
+          <li>견적 일괄 수정은 브라우저에서 오류를 안내하고 서버에서 최신 기준정보로 전체 행을 재검증. 오류가 없을 때만 단일 트랜잭션으로 모두 반영해 일부 항목만 수정되는 상태를 방지</li>
         </ul>
       </div>
 
@@ -208,15 +212,15 @@
         <div class="proj-head"><h3>읽기 전용 MCP 운영 데이터 서버</h3><span class="date">2026.08 – 2026.09</span></div>
         <ul class="dia">
           <li>CRM·주문·견적·문의·제조·문서·마케팅 데이터를 검색·상세·관계·지표 등 <strong>7개 읽기 전용 조회 도구</strong>로 통합하고 관리자 인증·조회 범위 제한을 적용</li>
-          <li>GA4·Google Search Console·Google Ads의 일별·월별 통계를 배치 처리하고 정기 작업으로 변경분만 갱신</li>
+          <li>MCP에서 조회할 마케팅 통계를 GA4·Google Search Console·Google Ads에서 배치 수집하고, 정기 실행 시 변경분만 갱신</li>
         </ul>
       </div>
 
       <div class="project">
-        <div class="proj-head"><h3>기타 주요 기여</h3></div>
+        <div class="proj-head"><h3>웹 성능·콘텐츠</h3><span class="date">2025.03 – 2026.04</span></div>
         <ul class="dia">
-          <li><strong>웹 성능·콘텐츠 · 2025.03 – 2026.04:</strong> 공통 렌더러·WebP 이전·업로드 전 압축으로 운영 이미지 용량 <strong>77.5% 절감</strong>(백업 제외), 동일 환경·캐시 없는 대표 페이지 전체 로드 <strong>3초 → 0.7초</strong> 개선</li>
-          <li><strong>도면 접근통제 · 기존 웹·보안 프로젝트:</strong> 협력사·거래 상태 기반 보호 API와 감사 로그로 <strong>ISO/IEC 27001 인증 통과에 기여</strong></li>
+          <li>콘텐츠 표시는 공통 모델·렌더러로 통합해 관리자 미리보기와 공개 웹의 표시 차이 해소</li>
+          <li>이미지 전송은 WebP 이전·업로드 전 압축으로 최적화해 운영 이미지 용량 <strong>77.5% 절감</strong>(백업 제외), 동일 환경·캐시 없는 대표 페이지 전체 로드 <strong>3초 → 0.7초</strong> 개선</li>
         </ul>
       </div>
     </section>
@@ -225,11 +229,11 @@
       <h2>OTHER EXPERIENCE</h2>
       <div class="other-item">
         <div class="proj-head"><h3>항해 플러스 백엔드 6기</h3><span class="date">2024.09 – 2024.12</span></div>
-        <p class="org">스파르타 코딩클럽 · TDD·대용량 트래픽·장애 대응 과정 수료, 과제 통과율 80%(평균 60%)·<a href="https://hhpluscertificateofcompletion.oopy.io/">실력 인증서 상위권</a></p>
+        <p class="org">스파르타 코딩클럽 · 과제 통과율 80%(평균 60%), <a href="https://hhpluscertificateofcompletion.oopy.io/">실력 인증서 상위권</a></p>
       </div>
       <div class="other-item">
         <div class="proj-head"><h3>Udemy 취업부트캠프 풀스택 과정</h3><span class="date">2023.12 – 2024.03</span></div>
-        <p class="org">웅진씽크빅 · 팀 프로젝트 최우수상, 팀장으로 일정·진행 및 GitHub–Slack 협업 체계 관리</p>
+        <p class="org">웅진씽크빅 · 팀 프로젝트 최우수상</p>
       </div>
     </section>
 

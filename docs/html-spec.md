@@ -92,9 +92,10 @@
 
 ### 경력기술서 구조
 
-- `.sheet` 안에 `.masthead` → `hr.head-rule` → `.intro` → `section.block` 순서로 배치한다.
+- `.sheet` 안에 `.masthead` → `hr.head-rule` → `.intro` → `.note` → `section.block` 순서로 배치한다.
 - 헤더의 `.kicker`, `h1`, `.company`, `.role-line` 구조를 유지한다.
 - 프로젝트는 `.proj-head` 안의 `h2`와 `.date`로 표현한다. 이 `h2`의 아래 마진은 `0`, 자간은 `0.5px`이다.
+- 2쪽 구성은 프로젝트마다 배경·담당 범위를 합친 소개 `p` 하나와 기능별 구현·성과를 연결한 `ul.dia` 항목 2~4개로 작성한다. 별도 `CORE CAPABILITIES`, 반복 소제목, 기술 요약 목록은 두지 않는다. 핵심 기술·판단·성과 수치와 측정 조건은 해당 본문에 남긴다.
 - 상세 소제목 `h4`: 크기 `15px`, 굵기 `700`, 색 `var(--ink)`, 마진 `var(--space-group) 0 var(--space-content)` (`16px 0 8px`).
 - `.block p`의 아래 마진은 `var(--space-content)` (`8px`). 본문 `p strong`은 색 `var(--ink)`, 굵기 `700`이다.
 - `.tech-points`: 크기 `13.5px`, 색 `var(--muted)`, 위 마진 `16px`. 내부 `strong`도 같은 색에 굵기 `700`을 사용한다.
@@ -114,12 +115,13 @@
 | 항목 | 이력서 | 경력기술서 |
 | --- | --- | --- |
 | `@page` 여백 | `20mm 16mm` | `11mm 15mm` |
-| `body` 행간 | `1.78` | `1.62` |
+| `body` 행간 | `1.72` | `1.76` |
 | 섹션 위 여백 | `section` `32px` | `section.block` `32px` |
 | 목록 항목 아래 여백 | `ul.dia li` `4px`, 마지막은 `0` | `ul.dia li` `4px`, 마지막은 `0` |
 | 프로젝트 머리 아래 여백 | `.proj-head` `0` | `.proj-head` `8px` |
 
 - 강제 페이지 나눔(`break-before: page`)을 쓰지 않는다. 두 문서 모두 흐름대로 배치하고, 페이지를 채우려고 간격 계층을 깨거나 종이 여백을 늘리지 않는다.
+- 인쇄 시 `ul.dia`는 `list-style: disc; padding-left: 22px`, 내부 `li`는 `position: static; padding-left: 0`으로 바꾸고 `li::before`는 `content: none`으로 숨긴다. 화면의 다이아몬드는 유지하되 PDF에서는 기본 목록 표식을 사용해 본문이 제목 뒤로 밀려 추출되는 현상을 막는다. 텍스트 추출 순서는 PDF 재생성 후 별도로 검증한다.
 - 인쇄 결과물과 페이지 밀도 기준은 [PDF 문서 규격](pdf-spec.md)을 따른다.
 
 ## 완료 전 확인

@@ -34,6 +34,7 @@ career/
 ## 규칙
 
 - 에이전트 작업 규칙: [AGENTS.md](AGENTS.md)
+- 회사별 이력서·포트폴리오 작성 규칙: [docs/company-tailoring.md](docs/company-tailoring.md)
 - HTML 문서 규격: [docs/html-spec.md](docs/html-spec.md)
 - PDF 문서 규격: [docs/pdf-spec.md](docs/pdf-spec.md)
 - 커밋 컨벤션: [docs/commit-convention.md](docs/commit-convention.md)

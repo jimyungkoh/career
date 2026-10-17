@@ -11,6 +11,7 @@ career/
 ├── content/    # 원천(SoT) — 내용 편집 대상
 ├── output/     # 산출물(HTML·PDF) — 열람·제출 대상
 ├── docs/       # 관리 규칙·디자인 규격
+├── drafts/     # 작업 중 초안 (하위 파일 Git 제외)
 └── pending/    # 미반영 메모 (Git 제외)
 ```
 
@@ -27,9 +28,9 @@ career/
 
 ## 갱신
 
-내용 수정은 `content/`의 SoT md에서만 수행하고, 같은 작업에서 `output/`의 대응 HTML에도 반영한다. HTML은 파생 산출물이므로 내용을 직접 수정하지 않는다. 스타일·레이아웃을 포함한 HTML 갱신은 [HTML 문서 규격](docs/html-spec.md)을 따른다.
+내용 수정은 `content/`의 SoT md에서만 수행하고, 같은 작업에서 `output/`의 대응 HTML과 PDF도 함께 갱신한다. HTML은 파생 산출물이므로 내용을 직접 수정하지 않는다. SoT 내용과 무관한 스타일·레이아웃 개선은 HTML에서 수행할 수 있으며, [HTML 문서 규격](docs/html-spec.md)을 따른다.
 
-인쇄 값이 바뀌면 같은 작업에서 대응 PDF도 재생성한다. PDF도 파생 산출물이므로 직접 편집하지 않는다. 자세한 절차는 [PDF 문서 규격](docs/pdf-spec.md)을 따른다.
+HTML의 스타일·레이아웃이나 인쇄 값이 바뀐 경우에도 같은 작업에서 대응 PDF를 재생성한다. PDF도 파생 산출물이므로 직접 편집하지 않는다. 자세한 절차는 [PDF 문서 규격](docs/pdf-spec.md)을 따른다.
 
 ## 규칙
 
